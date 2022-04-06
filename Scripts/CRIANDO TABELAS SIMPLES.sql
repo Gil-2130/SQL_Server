@@ -6,14 +6,15 @@ CREATE TABLE NomeTabela (
 	coluna2 tipo RestricaoDaColuna,
 	coluna3 tipo RestricaoDaColuna,
    ....
+   
 );
-===== PRINCIPAIS TIPOS DE RESTRI«’ES QUE PODEM SER APLICADAS =====
-* NOT NULL --> N„o Permite Nulos
-* UNIQUE --> ForÁa que todos os valores em uma coluna sejam diferentes
-* PRIMARY KEY --> Uma junÁ„o de NOT NULL e UNIQUE
-* FOREIGN KEY --> IdentificaÁ„o de uma unica linha em outra tabela
-* CHECK --> ForÁa uma condiÁ„o especifica em uma coluna.
-* DEFAULT --> ForÁa um valor padr„o quando nenhum valor È passado
+===== PRINCIPAIS TIPOS DE RESTRI√á√ïES QUE PODEM SER APLICADAS =====
+* NOT NULL --> N√£o Permite Nulos
+* UNIQUE --> For√ßa que todos os valores em uma coluna sejam diferentes
+* PRIMARY KEY --> Uma jun√ß√£o de NOT NULL e UNIQUE
+* FOREIGN KEY --> Identifica√ß√£o de uma unica linha em outra tabela
+* CHECK --> For√ßa uma condi√ß√£o especifica em uma coluna.
+* DEFAULT --> For√ßa um valor padr√£o quando nenhum valor √© passado
 */
 
 
