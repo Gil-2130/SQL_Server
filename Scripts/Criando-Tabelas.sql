@@ -1,11 +1,12 @@
 /*
-INSERT INTO nomeTabela(coluna1, coluna2,...)  -- Nome das colunas que ser„o inseridas as informaÁıes
-VALUES(valor1, valor2)  --Valores que ser„o inseridos nas colunas (devem corresponder · mesma quantidade de colunas)
-VALUES(valor1, valor2) -- TambÈm È oissivel inserir quantas informaÁoes desejar mas respeitando a quantidade de colunas
+INSERT INTO nomeTabela(coluna1, coluna2,...)  -- Nome das colunas que ser√£o inseridas as informa√ß√µes
+VALUES(valor1, valor2)  --Valores que ser√£o inseridos nas colunas (devem corresponder √° mesma quantidade de colunas)
+VALUES(valor1, valor2) -- Tamb√©m √© oissivel inserir quantas informa√ßoes desejar mas respeitando a quantidade de colunas
 
 INSERT INTo TabelaA (coluna1)
 SELECT coluna2
 FROM TabelaB
+
 */
 
 -- Criando Tabela dentro do banco de dados
@@ -25,7 +26,7 @@ VALUES(1, 'Aula 1')
 SELECT *
 FROM Aula
 
--- Inserindo novas informaÁoes em nossa tabela
+-- Inserindo novas informa√ßoes em nossa tabela
 INSERT INTO Aula(ID, Nome)
 VALUES
 (2, 'Aula 2'),
