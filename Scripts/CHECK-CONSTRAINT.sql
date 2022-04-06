@@ -1,9 +1,9 @@
 /* 
 CHECK CONSTRAINT -->
-Criando restriçoes de valores que podem ser inseridos em uma coluna de uma tabela em banco 
-de dados quando você está criando uma nova tabela.
+Criando restriÃ§oes de valores que podem ser inseridos em uma coluna de uma tabela em banco 
+de dados quando vocÃª estÃ¡ criando uma nova tabela.
 
-Basicamente é como se fosse uma condição que deve ser atendida qunado os dados forem inseridos.
+Basicamente Ã© como se fosse uma condiÃ§Ã£o que deve ser atendida qunado os dados forem inseridos.
 
 Syntaxe;
 
@@ -14,7 +14,8 @@ CREATE TABLE CarteiraMotorista(
 );
 
 */
---Vendo isso na prática;
+
+--Vendo isso na prÃ¡tica;
 CREATE TABLE CarteiraMotorista(
 	ID INT NOT NULL,
 	Nome VARCHAR(150),
@@ -25,20 +26,20 @@ CREATE TABLE CarteiraMotorista(
 SELECT *
 FROM CarteiraMotorista
 
--- Inserindo valores na tabela (Vamos provocar um erro para ver a restrição em ação)
+-- Inserindo valores na tabela (Vamos provocar um erro para ver a restriÃ§Ã£o em aÃ§Ã£o)
 INSERT INTO CarteiraMotorista(ID, Nome, Idade)
 VALUES(1, 'Giliard', 17)
 
 /*
 -- A mensagem de erro foi;
 
-Mensagem 547, Nível 16, Estado 0, Linha 29
-A instrução INSERT conflitou com a restrição do CHECK "CK__CarteiraM__Idade__48CFD27E".
+Mensagem 547, NÃ­vel 16, Estado 0, Linha 29
+A instruÃ§Ã£o INSERT conflitou com a restriÃ§Ã£o do CHECK "CK__CarteiraM__Idade__48CFD27E".
 O conflito ocorreu no banco de dados "Youtube", tabela "dbo.CarteiraMotorista", column 'Idade'.
 
 */
 
--- Agora iremos inserir novamente os dados, mas atendendo a restrição imposta.
+-- Agora iremos inserir novamente os dados, mas atendendo a restriÃ§Ã£o imposta.
 INSERT INTO CarteiraMotorista(ID, Nome, Idade)
 VALUES(1, 'Giliard', 25)
 
@@ -48,4 +49,4 @@ FROM CarteiraMotorista
 
 --===== DESAFIO =====
 
--- Criar 02 tabelas novas e aplicar restrições para elas.
+-- Criar 02 tabelas novas e aplicar restriÃ§Ãµes para elas.
