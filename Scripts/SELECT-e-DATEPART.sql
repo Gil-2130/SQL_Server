@@ -1,29 +1,31 @@
 /* 
-DATEPART --> Função para trabalhar com datas (TimeStamp)
-Veja abaixo com mais detalhes como funciona esa função e seus argumentos
+
+DATEPART --> FunÃ§Ã£o para trabalhar com datas (TimeStamp)
+Veja abaixo com mais detalhes como funciona esa funÃ§Ã£o e seus argumentos
 https://docs.microsoft.com/pt-br/sql/t-sql/functions/datepart-transact-sql?view=sql-server-ver15
+
 */
 SELECT *
 FROM Sales.SalesOrderHeader  --> Obtendo a tabela
 
-SELECT SalesOrderID, DATEPART(month, OrderDate) AS Mês  --> Obtendo os pedidos por Mês de uma tabela
+SELECT SalesOrderID, DATEPART(month, OrderDate) AS MÃªs  --> Obtendo os pedidos por MÃªs de uma tabela
 FROM Sales.SalesOrderHeader
 
 SELECT SalesOrderID, DATEPART(YEAR, OrderDate) AS Ano  --> Obtendo os pedidos por Ano de uma tabela
 FROM Sales.SalesOrderHeader
 
--- Média de valor devido por mês
-SELECT AVG(TotalDue) as Média, DATEPART (month, OrderDate) as Mês
+-- MÃ©dia de valor devido por mÃªs
+SELECT AVG(TotalDue) as MÃ©dia, DATEPART (month, OrderDate) as MÃªs
 FROM Sales.SalesOrderHeader
 GROUP BY DATEPART(month, OrderDate)
 
--- Média de valor devido por Ano
-SELECT AVG(TotalDue) as Média, DATEPART (YEAR, OrderDate) as Ano
+-- MÃ©dia de valor devido por Ano
+SELECT AVG(TotalDue) as MÃ©dia, DATEPART (YEAR, OrderDate) as Ano
 FROM Sales.SalesOrderHeader
 GROUP BY DATEPART(YEAR, OrderDate)
 
--- Média de valor devido por Ano
-SELECT AVG(TotalDue) as Média, DATEPART (DAY, OrderDate) as Dia
+-- MÃ©dia de valor devido por Ano
+SELECT AVG(TotalDue) as MÃ©dia, DATEPART (DAY, OrderDate) as Dia
 FROM Sales.SalesOrderHeader
 GROUP BY DATEPART(DAY, OrderDate)
 ORDER BY Dia
