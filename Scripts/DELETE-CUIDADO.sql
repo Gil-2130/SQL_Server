@@ -1,11 +1,12 @@
 /* 
-DELETE -> Como o nome j· diz; apaga linhas do banco de dados.
-porÈm ele deve ser usado com alguma condiÁ„o, caso contr·rio ele simplesmente apagar· 
-todas as linhas da coluna/tabela(A menos que seja isso que vocÍ deseje)
+DELETE -> Como o nome j√° diz; apaga linhas do banco de dados.
+por√©m ele deve ser usado com alguma condi√ß√£o, caso contr√°rio ele simplesmente apagar√° 
+todas as linhas da coluna/tabela(A menos que seja isso que voc√™ deseje)
 
  DELETE
  FROM NomeTabela
  WHERE condicao
+ 
  */
 
 -- Obtendo a Tabela
@@ -20,7 +21,7 @@ WHERE ID = 4
 SELECT *
 FROM Aula
 
--- Apagando todas as linhas da tabela (NAO FA«A ISSO EM AMBIENTE DE PRODU«√O!!)
+-- Apagando todas as linhas da tabela (NAO FA√áA ISSO EM AMBIENTE DE PRODU√á√ÉO!!)
 DELETE FROM Aula 
 
 SELECT *
