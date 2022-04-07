@@ -7,12 +7,12 @@ SELECT MiddleName, count(MiddleName) as Contagem
 FROM Person.Person
 GROUP BY MiddleName
 
--- DESAFIO 2 -> Precisamos saber em média, qual é a quantidade que cada produto é vendido na  loja
+-- DESAFIO 2 -> Precisamos saber em mÃ©dia, qual Ã© a quantidade que cada produto Ã© vendido na  loja
 
 SELECT *
 FROM sales.SalesOrderDetail
 
-SELECT ProductID, AVG(OrderQty) as média
+SELECT ProductID, AVG(OrderQty) as mÃ©dia
 FROM Sales.SalesOrderDetail
 GROUP BY ProductID
 
@@ -21,35 +21,36 @@ GROUP BY ProductID
 SELECT *
 FROM Sales.SalesOrderDetail
 
+
 -- RESPOSTA - 1 (minha formnula)
 
-SELECT TOP 10 ProductID, SUM(LineTotal) as Máximo
+SELECT TOP 10 ProductID, SUM(LineTotal) as MÃ¡ximo
 FROM Sales.SalesOrderDetail
 GROUP BY ProductID
-ORDER BY Máximo DESC;
+ORDER BY MÃ¡ximo DESC;
 
 
 -- RESPOSTA - 2 (Pofessor)
 
-SELECT TOP 10 ProductID, SUM(LineTotal) as Máximo
+SELECT TOP 10 ProductID, SUM(LineTotal) as MÃ¡ximo
 FROM Sales.SalesOrderDetail
 GROUP BY ProductID
 ORDER BY sum(LineTotal) DESC; 
 
 
 -- DESAFIO - 4 -> Precisamos saber quantos produtos e qual a quantidade media de produtos temos cadastrados
--- nas nossas ordem de serviço (WorkOrder), agrupados por ProductID
+-- nas nossas ordem de serviÃ§o (WorkOrder), agrupados por ProductID
 
 SELECT *
 FROM Production.WorkOrder  -- Obtedno a tabela
 
 -- Minha Resposta (errada)
-SELECT DISTINCT(ProductID), AVG(StockedQty) as média
+SELECT DISTINCT(ProductID), AVG(StockedQty) as mÃ©dia
 FROM Production.WorkOrder
 GROUP BY ProductID
 
 -- Resposta do professor
 SELECT ProductID, count(ProductID) "contagem",
-AVG(orderqty) as média
+AVG(orderqty) as mÃ©dia
 FROM Production.WorkOrder
 GROUP BY ProductID
