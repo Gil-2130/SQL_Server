@@ -1,5 +1,6 @@
 /* Desafio 1:
 Quantos produtos temos cadastrados no sistema e que custam mais que 1500 dolares?
+
 */
 
 --RESPOSTA 1 --
@@ -35,12 +36,12 @@ WHERE LastName like 'P%'  -- Retornando apenas a quantidade de registros encontr
 
 
 /* DESAFIO 3
-Em quantas cidades unicas est„o cadastrados nossos clientes?
+Em quantas cidades unicas est√£o cadastrados nossos clientes?
 */
 
 --RESPOSTA 1
 SELECT * 
-FROM Person.Address  -- Obtendo o endereÁo dos clientes
+FROM Person.Address  -- Obtendo o endere√ßo dos clientes
 
 SELECT COUNT(DISTINCT(City)) -- Obtendo a quantidade de cidades unicas cadastradas
 FROM Person.Address
@@ -58,7 +59,7 @@ SELECT DISTINCT City  -- Obtendo apenas o nome das cidades sem repeti-las
 FROM Person.Address
 
 /* DESAFIO 5 
-Quantos produtos vermelhos tem preÁo entre 500 a 1000 dolares?
+Quantos produtos vermelhos tem pre√ßo entre 500 a 1000 dolares?
 */
 
 --RESPOSTA 1
