@@ -1,20 +1,22 @@
 /*
-ORDER BY -> Permite que o resultado seja ordenado por alguma coluna em especÌfico,
-em ordem crescente ou decrescente. A sintaxe È;
+
+ORDER BY -> Permite que o resultado seja ordenado por alguma coluna em espec√≠fico,
+em ordem crescente ou decrescente. A sintaxe √©;
 SELECT coluna1, coluna2
 FROM tabela
 ORDER BY coluna1, asc/desc
+
 */
 
 SELECT *
 FROM Person.Person;
 
--- Ordenando pelo nome da pessoa em ordem crescente/alfabÈtica --
+-- Ordenando pelo nome da pessoa em ordem crescente/alfab√©tica --
 SELECT *
 FROM Person.Person
 ORDER BY FirstName asc
 
--- Ordenando por nome e sobrenome, onde o nome ficar· em ordem crescente e sobrenome em ordem decrescente
+-- Ordenando por nome e sobrenome, onde o nome ficar√° em ordem crescente e sobrenome em ordem decrescente
 SELECT *
 FROM Person.Person
 ORDER BY FirstName asc, LastName desc
