@@ -1,29 +1,31 @@
 /*
-FUN«’ES MATEM¡TICAS
+
+FUN√á√ïES MATEM√ÅTICAS
 
 https://docs.microsoft.com/pt-br/sql/t-sql/functions/mathematical-functions-transact-sql?view=sql-server-ver15
+
 */
 
 SELECT * 
 FROM Sales.SalesOrderDetail
 
--- Realizando operaÁıes com colunas da Tabela
-SELECT UnitPrice + LineTotal  -- Podemos usar qualquer tipo de operaÁ„o nessas colunas
+-- Realizando opera√ß√µes com colunas da Tabela
+SELECT UnitPrice + LineTotal  -- Podemos usar qualquer tipo de opera√ß√£o nessas colunas
 FROM Sales.SalesOrderDetail
 
--- Obtendo a mÈdia de uma coluna da tabela
-SELECT AVG(LineTotal) as MÈdia
+-- Obtendo a m√©dia de uma coluna da tabela
+SELECT AVG(LineTotal) as M√©dia
 FROM Sales.SalesOrderDetail
 
 --Obtendo a Soma de uma coluna da tabela
 SELECT SUM(LineTotal) as Soma
 FROM Sales.SalesOrderDetail
 
--- Obtendo o mÌnimo da coluna
-SELECT MIN(LineTotal) as MÌnimo
+-- Obtendo o m√≠nimo da coluna
+SELECT MIN(LineTotal) as M√≠nimo
 FROM Sales.SalesOrderDetail
 
--- Obtendo o m·ximo de uma coluna
+-- Obtendo o m√°ximo de uma coluna
 SELECT MAX(LineTotal)
 FROM Sales.SalesOrderDetail
 
@@ -32,5 +34,5 @@ SELECT ROUND(LineTotal, 2), LineTotal
 FROM Sales.SalesOrderDetail
 
 -- Obtendo a raiz quadrada de uma coluna
-SELECT SQRT(LineTotal) as RaÌz_Quadrada
+SELECT SQRT(LineTotal) as Ra√≠z_Quadrada
 FROM Sales.SalesOrderDetail
