@@ -1,22 +1,23 @@
--- SELF JOIN  --> Usado para trazer comparaÁıes de uma unica tabela, por exemplo; dados onde a data de nascimento,
--- data de cadastro ou percentual de descontos s„o iguais
+-- SELF JOIN 
+--> Usado para trazer compara√ß√µes de uma unica tabela, por exemplo; dados onde a data de nascimento,
+-- data de cadastro ou percentual de descontos s√£o iguais
 --SELECT NOME_COLUNA
 --FROM TabelaA, TabelaB
 --WHERE condicao
 
--- Queremos todos os clientes que mora na mesma regi„o
+-- Queremos todos os clientes que mora na mesma regi√£o
 SELECT A.ContactName
 FROM Customers A, Customers B
 WHERE A.Region = B.Region
---> A saÌda acima mostrou apenas os nomes, mas n„o as regiıes. Iremos detalhar um pouco mais
+--> A sa√≠da acima mostrou apenas os nomes, mas n√£o as regi√µes. Iremos detalhar um pouco mais
 
 SELECT A.ContactName, A.Region, B.ContactName, B.Region
 FROM Customers A, Customers B
 WHERE A.Region = B.Region
 
 
--- Agora queremos encontrar (Nome e Data de contrataÁ„o) de todos
--- os funcion·rios que foram contratados no mesmo ano.
+-- Agora queremos encontrar (Nome e Data de contrata√ß√£o) de todos
+-- os funcion√°rios que foram contratados no mesmo ano.
 SELECT *
 FROM Employees -- Buscando a Tabela
 
