@@ -1,27 +1,30 @@
-/* SUBQUERY
-SUB-SELECT AVAN«ADO --> De forma geral o SubQUERy È um SELECT dentro de outro SELECT
+/*
+
+SUBQUERY
+SUB-SELECT AVAN√áADO --> De forma geral o SubQUERy √© um SELECT dentro de outro SELECT
+
 */
 
 -- EXEMPLO 1
--- Crie um relatÛrio de todos os produtos cadastrados que tem preÁo de venda acima da mÈdia
+-- Crie um relat√≥rio de todos os produtos cadastrados que tem pre√ßo de venda acima da m√©dia
 
 
 -- Forma Comum
 SELECT *
-FROM Production.Product  -- Obtendo a tabela para extraÌrmos a informaÁ„o que precisamos
+FROM Production.Product  -- Obtendo a tabela para extra√≠rmos a informa√ß√£o que precisamos
 
 SELECT AVG(ListPrice)
-FROM Production.Product  -- Encontrando a mÈdia
+FROM Production.Product  -- Encontrando a m√©dia
 
 SELECT *
 FROM Production.Product
-WHERE ListPrice > 438.66  -- Agora sim retornando a lista apenas com valores acima da mÈdia
+WHERE ListPrice > 438.66  -- Agora sim retornando a lista apenas com valores acima da m√©dia
 
--- PorÈm conforme vocÍ percebeu, existe muitos comandos a se fazer para conseguir uma ˙nica informaÁ„o.
--- Vejamos como fazer isso de forma mais f·cil usando SUBQUERYs
+-- Por√©m conforme voc√™ percebeu, existe muitos comandos a se fazer para conseguir uma √∫nica informa√ß√£o.
+-- Vejamos como fazer isso de forma mais f√°cil usando SUBQUERYs
 
 
--- Usando SUBQUERY para obter a mesma informaÁ„o do codigo acima
+-- Usando SUBQUERY para obter a mesma informa√ß√£o do codigo acima
 SELECT *
 FROM Production.Product
 WHERE ListPrice > (SELECT AVG(listPrice)
@@ -30,9 +33,9 @@ FROM Production.Product)
 
 
 -- EXEMPLO 2
--- Queremos Saber o nome dos funcion·rios que tem o cargo de 'Design Engineer'
+-- Queremos Saber o nome dos funcion√°rios que tem o cargo de 'Design Engineer'
 SELECT *
-FROM Person.Person -- Obtendo o nome dos funcion·rios (First Name)
+FROM Person.Person -- Obtendo o nome dos funcion√°rios (First Name)
 
 SELECT *
 FROM HumanResources.Employee -- Obtendo os cargos (Job Title)
@@ -50,21 +53,21 @@ SELECT BusinessEntityID
 FROM HumanResources.Employee
 WHERE JobTitle = 'Design Engineer')
 
--- Podemos tambÈm executar a operaÁ„o acima usando JOINS
+-- Podemos tamb√©m executar a opera√ß√£o acima usando JOINS
 SELECT PP.FirstName
 FROM Person.Person PP
 INNER JOIN HumanResources.Employee RE on PP.BusinessEntityID = RE.BusinessEntityID
 AND RE.JobTitle = 'Design Engineer'
 
 -- ----------Desafios-------------
--- Encontre todos os endereÁos que est„o no estado de 'Alberta' 
+-- Encontre todos os endere√ßos que est√£o no estado de 'Alberta' 
 SELECT *
 FROM Person.Address
 
 SELECT *
 FROM Person.StateProvince -- Obtendo o estado
 
--- Imprimindo apenas o endereÁo (AdressLine1)
+-- Imprimindo apenas o endere√ßo (AdressLine1)
 SELECT AddressLine1
 FROM Person.Address
 WHERE StateProvinceID
