@@ -1,15 +1,17 @@
 /*
-UNION --> Este Operador combina dois ou mais resultados de um SELECT em apenas um.
-O mesmo tambÈm remove as duplicatas se elas existirem.
-O UNION È comumente usado em tabelas n„o-normalizadas ou que possuem inconsistÍncias
 
-PorÈm caso deseje que o UNION retorne essas duplicatas, use UNION ALL e ele trar· todas as informaÁıes das duas tabelas
+UNION --> Este Operador combina dois ou mais resultados de um SELECT em apenas um.
+O mesmo tamb√©m remove as duplicatas se elas existirem.
+O UNION √© comumente usado em tabelas n√£o-normalizadas ou que possuem inconsist√™ncias
+
+Por√©m caso deseje que o UNION retorne essas duplicatas, use UNION ALL e ele trar√° todas as informa√ß√µes das duas tabelas
 
 SELECT coluna1, coluna2
 FROM tabela1
 UNION
 SELECT coluna1, coluna2
 FROM tabela2
+
 */
 --EXEMPLO 1
 SELECT [ProductID], [Name], [ProductNumber] 
