@@ -1,5 +1,6 @@
 /*
-Operador      -     Descrição
+
+Operador      -     DescriÃ§Ã£o
 =					IGUAL
 >					MAIOR QUE
 <					MENOR QUE
@@ -8,6 +9,7 @@ Operador      -     Descrição
 <=					MENOR OU IGUAL
 AND					OPERADOR LOGICO 'E'
 OR					OPERADOR LOGICO 'OU'
+
 */
 
 SELECT *
