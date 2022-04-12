@@ -1,13 +1,15 @@
-/* STRINGS  --> OperaÁ„o com strings
+/*
+STRINGS  --> Opera√ß√£o com strings
 
 https://docs.microsoft.com/pt-br/sql/t-sql/functions/string-functions-transact-sql?view=sql-server-ver15
 
 */
+
 SELECT *
 FROM Person.Person -- Obtendo a tabela
 
-SELECT CONCAT(FirstName, ' ', LastName) -- Concatenando nome sobrenome, note que usamos espaÁo.
-FROM Person.Person						-- Caso contr·rio os nomes estariam colados um no outro.
+SELECT CONCAT(FirstName, ' ', LastName) -- Concatenando nome sobrenome, note que usamos espa√ßo.
+FROM Person.Person						-- Caso contr√°rio os nomes estariam colados um no outro.
 
 SELECT UPPER(FirstName)  -- Colocando todas as letras do nome em letras MAIUSCULAS
 FROM Person.Person
@@ -24,8 +26,8 @@ FROM Person.Person
 
 
 
--- SUBSTRING --> ExtraÌndo um 'pedaÁo' da string
-SELECT FirstName, SUBSTRING(FirstName, 2, 3)  -- o primeiro digito indica a posiÁ„o de inicio
+-- SUBSTRING --> Extra√≠ndo um 'peda√ßo' da string
+SELECT FirstName, SUBSTRING(FirstName, 2, 3)  -- o primeiro digito indica a posi√ß√£o de inicio
 FROM Person.Person							  -- enquanto o segundo digito indica quantos caracteres a nova string deve possuir
 
 
