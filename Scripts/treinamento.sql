@@ -1,3 +1,6 @@
+/* 
+Treinamento simples no Banco de dados
+*/
 SELECT *
 FROM Production.Product
 
@@ -39,5 +42,5 @@ BEGIN
 	ORDER BY [Name] DESC
 END
 
--- VErificando as novas alterações na procedure
+-- VErificando as novas alteraÃ§Ãµes na procedure
 EXECUTE TesteDB
