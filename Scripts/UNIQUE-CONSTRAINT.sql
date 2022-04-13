@@ -1,8 +1,8 @@
 /*
-UNIQUE CONSTRAINT --> S„o colunas ˙nicas, porÈm diferente de uma PRIMARY KEY
-Podem existir varias colunas com a restriÁ„o UNIQUE.
+UNIQUE CONSTRAINT --> S√£o colunas √∫nicas, por√©m diferente de uma PRIMARY KEY
+Podem existir varias colunas com a restri√ß√£o UNIQUE.
 
-Ela tambÈm n„o permite que sejam inseridos valores duplicados, garantindo consistÍncia nos dados.
+Ela tamb√©m n√£o permite que sejam inseridos valores duplicados, garantindo consist√™ncia nos dados.
 
 =====SYNTAXE=====
 CREATE TABLE CtMotorista1(
@@ -36,12 +36,13 @@ FROM CtMotorista1
 
 -- inserindo e verificando se a tabela aceita dados duplicados (campo CNH)
 INSERT INTO CtMotorista1(ID, Nome, Idade, CodigoCNH)
-VALUES(2, 'JosÈ', 53, 1000)
+VALUES(2, 'Jos√©', 53, 1000)
 
 /*
+
 -- A mensagem de erro foi;
-Mensagem 2627, NÌvel 14, Estado 1, Linha 38
-ViolaÁ„o da restriÁ„o UNIQUE KEY 'UQ__CtMotori__F42C573FCBB75A4D'.
-N„o È possÌvel inserir a chave duplicada no objeto 'dbo.CtMotorista1'. O valor de chave duplicada È (1000).
+Mensagem 2627, N√≠vel 14, Estado 1, Linha 38
+Viola√ß√£o da restri√ß√£o UNIQUE KEY 'UQ__CtMotori__F42C573FCBB75A4D'.
+N√£o √© poss√≠vel inserir a chave duplicada no objeto 'dbo.CtMotorista1'. O valor de chave duplicada √© (1000).
 
 */
