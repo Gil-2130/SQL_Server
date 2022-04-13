@@ -1,4 +1,5 @@
-/* Tipos de Joins
+/*
+Tipos de Joins
 
 == INNER JOIN --> Retorna apenas os resultados que correspondem/Existem na tabela A como na tabela B
 SELECT *
@@ -7,8 +8,8 @@ INNER JOIN TabelaB
 ON TabelaA.Nome = TabelaB.Nome
 
 
-== FULL OUTER JOIN --> Retorna um conjunto de todos os registros correspondentes da tabela A e Tabela B quando s„o iguais.
-E alÈm disso, se n„o houver valores correspondentesn ele simplesmente ir· preencher esse lado com "null".
+== FULL OUTER JOIN --> Retorna um conjunto de todos os registros correspondentes da tabela A e Tabela B quando s√£o iguais.
+E al√©m disso, se n√£o houver valores correspondentesn ele simplesmente ir√° preencher esse lado com "null".
 SELECT *
 FROM TabelaA
 FULL OUTER JOIN TabelaB
@@ -16,36 +17,38 @@ ON TabelaA.Nome = TabelaB.Nome
 
 
 == LEFT OUTER JOIN --> Retorna um conjunto de todos os registros da tabelaA, e alem disso, os registros correspondentes
-(quando disponiveis) na TabelaB. Se n„o houver registros correspondentes ele simplesmente vai preencher com "NULL"
+(quando disponiveis) na TabelaB. Se n√£o houver registros correspondentes ele simplesmente vai preencher com "NULL"
 SELECT *
 FROM TabelaA
 LEFT JOIN TabelaB
-ON TabelaA.Nome = TabelaB.Nome*/
+ON TabelaA.Nome = TabelaB.Nome
+
+*/
 
 
 
--- EXEMPLO --> Queremos descobrir quais pessoas tem um cart„o de crÈdito registrado?
+-- EXEMPLO --> Queremos descobrir quais pessoas tem um cart√£o de cr√©dito registrado?
 
--- Buscando a informaÁ„o com INNER JOIN
+-- Buscando a informa√ß√£o com INNER JOIN
 SELECT *
 FROM Person.Person PP
 INNER JOIN Sales.PersonCreditCard PC
 ON PP.BusinessEntityID = PC.BusinessEntityID
  --Observe que a pesquisa retornou 19.118 linhas
 
- --Buscando a informaÁ„o com LEFT JOIN
+ --Buscando a informa√ß√£o com LEFT JOIN
  SELECT *
 FROM Person.Person PP
 LEFT JOIN Sales.PersonCreditCard PC
 ON PP.BusinessEntityID = PC.BusinessEntityID
--- Agora observe que a pesquisa retornou 19.972 linhas, ou seja; O left join trouxe para nÛs
--- as informaÁıes de clientes que tambÈm n„o tinham cart„o de crÈdito (informaÁ„o completa)
+-- Agora observe que a pesquisa retornou 19.972 linhas, ou seja; O left join trouxe para n√≥s
+-- as informa√ß√µes de clientes que tamb√©m n√£o tinham cart√£o de cr√©dito (informa√ß√£o completa)
 
--- InformaÁ„o de quantas pessoas n„o possue o cart„o de crÈdito;
+-- Informa√ß√£o de quantas pessoas n√£o possue o cart√£o de cr√©dito;
 SELECT 19972 - 19118
---= ou seja; 854 pessoas n„o possuem cart„o de crÈdito
+--= ou seja; 854 pessoas n√£o possuem cart√£o de cr√©dito
 
--- AGora queremos descobrir quais pessoas n„o possuem o cart„o de credito?
+-- AGora queremos descobrir quais pessoas n√£o possuem o cart√£o de credito?
 SELECT *
 FROM Person.Person PP
 LEFT JOIN Sales.PersonCreditCard PC
