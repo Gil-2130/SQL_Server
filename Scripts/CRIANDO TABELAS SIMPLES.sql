@@ -1,4 +1,6 @@
-/* CREATE TABLE
+/*
+
+CREATE TABLE
 Aprendendo a criar tabelas
 Sintaxe;
 CREATE TABLE NomeTabela (
@@ -15,6 +17,7 @@ CREATE TABLE NomeTabela (
 * FOREIGN KEY --> Identificação de uma unica linha em outra tabela
 * CHECK --> Força uma condição especifica em uma coluna.
 * DEFAULT --> Força um valor padrão quando nenhum valor é passado
+
 */
 
 
