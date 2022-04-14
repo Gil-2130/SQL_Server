@@ -5,7 +5,7 @@ de dados quando você está criando uma nova tabela.
 
 Basicamente é como se fosse uma condição que deve ser atendida qunado os dados forem inseridos.
 
-Syntaxe;
+=========Syntaxe==========
 
 CREATE TABLE CarteiraMotorista(
 	ID INT NOT NULL,
