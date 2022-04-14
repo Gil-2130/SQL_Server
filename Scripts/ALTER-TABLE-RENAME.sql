@@ -1,4 +1,5 @@
 /*
+
 Iremos aprender a alterar a estrutura de uma tabela. Usando o ALTER TABLE
 
 Sintaxe
@@ -6,9 +7,10 @@ ALTER TABLE NomeTabela
 
 EXEMPLOS;
 - Add, Remover, ou Alterar uma coluna
-- Setar valores padrıes para uma coluna
-- Add ou remover restriÁoes de colunas
+- Setar valores padr√µes para uma coluna
+- Add ou remover restri√ßoes de colunas
 - Renomear uma tabela
+
 */
 
 -- Criando Novas Tabelas (Youtube1)
@@ -23,7 +25,7 @@ DataCriacao DATETIME NOT NULL
 SELECT *
 FROM Youtube1
 
--- Adicionando uma coluna · tabela
+-- Adicionando uma coluna √° tabela
 ALTER TABLE Youtube1
 ADD Ativo BIT
 
@@ -47,34 +49,34 @@ ALTER COLUMN Categoria VARCHAR(300) NOT NULL
 
 
 
--- =====Alterando o nome de uma coluna -- A Sintaxe È; =====
+-- =====Alterando o nome de uma coluna -- A Sintaxe √©; =====
 -- EXEC sp_rename 'NomeTabela.NomeColunaAtual', 'NomeColunaNova', 'COLUMN'
 EXEC sp_rename 'Youtube1.Nome', 'NewName', 'COLUMN'
 
--- Por padr„o, o SQL Server exibe a seguinte mensagem de aviso;
--- Cuidado: a alteraÁ„o de qualquer parte de um nome de objeto pode interromper scripts e procedimentos armazenados.
--- Isso quer dizer que qualquer Script que estiver rodando usando o nome da antiga coluna, ir· dar erro se n„o for atualizado
+-- Por padr√£o, o SQL Server exibe a seguinte mensagem de aviso;
+-- Cuidado: a altera√ß√£o de qualquer parte de um nome de objeto pode interromper scripts e procedimentos armazenados.
+-- Isso quer dizer que qualquer Script que estiver rodando usando o nome da antiga coluna, ir√° dar erro se n√£o for atualizado
 
--- Verificando a nova alteraÁ„o
+-- Verificando a nova altera√ß√£o
 SELECT *
 FROM Youtube1
 
 
--- ===== Alterando o nome da tabela. A sintaxe È; =====
+-- ===== Alterando o nome da tabela. A sintaxe √©; =====
 -- EXEC sp_rename 'NomeTabelaAtual', NomeTabelaNova'
 EXEC sp_rename 'Youtube1', 'Youtube_01'
 
--- TambÈm o SQL Avisa sobre possÌveis erros em Scripts ao renomear um objeto;
--- Cuidado: a alteraÁ„o de qualquer parte de um nome de objeto pode interromper scripts e procedimentos armazenados.
+-- Tamb√©m o SQL Avisa sobre poss√≠veis erros em Scripts ao renomear um objeto;
+-- Cuidado: a altera√ß√£o de qualquer parte de um nome de objeto pode interromper scripts e procedimentos armazenados.
 
 SELECT *
 FROM Youtube1
 
 -- Obviamente recebemos a mensagem de erro abaixo justamente por termos alterado o nome da tabela
--- Mensagem 208, NÌvel 16, Estado 1, Linha 69
--- Nome de objeto 'Youtube1' inv·lido.
+-- Mensagem 208, N√≠vel 16, Estado 1, Linha 69
+-- Nome de objeto 'Youtube1' inv√°lido.
 
--- O correto È;
+-- O correto √©;
 SELECT *
 FROM Youtube_01
 
@@ -82,4 +84,4 @@ FROM Youtube_01
 -- Crie uma tabela nova com  03 colunas e em seguida;
 -- 1. Altere o tipo de uma coluna!
 -- 2. Renomeie o nome de uma das colunas!
--- 3. Renomeie o nome da tabela que vocÍ criou
+-- 3. Renomeie o nome da tabela que voc√™ criou
