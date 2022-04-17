@@ -28,7 +28,7 @@ FROM Youtube1
 -- Adicionando uma coluna á tabela
 ALTER TABLE Youtube1
 ADD Ativo BIT
-
+-- Verificando se a nova coluna foi adicionada
 SELECT *
 FROM Youtube1
 
